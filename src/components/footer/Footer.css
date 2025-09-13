@@ -1,0 +1,13 @@
+/* Footer */
+.footer {
+  padding: 1.5rem;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.footer .socials a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #2e8b57;
+}
