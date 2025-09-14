@@ -1,9 +1,7 @@
 /* Footer */
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   background-color: #f6f5f1;
+  padding: 4rem 12.4rem;
 }
 
 .footer .socials a {
@@ -11,8 +9,12 @@
   text-decoration: none;
 }
 .mcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 0 auto;
-  padding: 4rem 12.4rem;
+  width: 100%;
+  max-width: 1192px;
 }
 
 @media (max-width: 768px) {
@@ -24,7 +26,8 @@
   .footer {
     padding: 3.2rem 1.6rem;
   }
-  .footer {
-    flex-direction: column;
+  .mcontainer {
+    flex-direction: column-reverse;
+    gap: 24px;
   }
 }

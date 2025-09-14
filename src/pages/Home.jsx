@@ -2,7 +2,7 @@ import "./Home.css";
 import "../components/button.css";
 function Home() {
   return (
-    <div className="home ">
+    <div className="home">
       {/* Navbar */}
       <div className="my-container">
         {/* Hero */}

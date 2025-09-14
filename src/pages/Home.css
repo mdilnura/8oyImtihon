@@ -249,8 +249,11 @@
   margin-bottom: 4rem;
 }
 @media (max-width: 768px) {
+ 
   .cta {
     padding: 8rem 0;
+    background-position: -25px 137px, 534px -30px;
+    background-size: 179px 231px, 171px;
   }
 }
 @media (max-width: 375px) {
@@ -259,6 +262,9 @@
   }
   .cta h2 {
     font-size: 4rem;
+  }
+  .cta {
+    background-position: 130px -100px, 0px 0px;
   }
 }
 .span {

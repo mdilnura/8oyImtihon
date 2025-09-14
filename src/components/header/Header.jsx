@@ -13,21 +13,21 @@ export default function Header() {
               end
               className={({ isActive }) => (isActive ? "active-link" : "item")}
             >
-              Home
+              <span>Home</span>
             </NavLink>
 
             <NavLink
               to="/about"
               className={({ isActive }) => (isActive ? "active-link" : "item")}
             >
-              About
+              <span>About</span>
             </NavLink>
 
             <NavLink
               to="/contact"
               className={({ isActive }) => (isActive ? "active-link" : "item")}
             >
-              Contact
+              <span>Contact</span>
             </NavLink>
           </nav>
           <button className="btn">Browse recipes</button>
