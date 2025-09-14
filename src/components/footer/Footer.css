@@ -1,13 +1,30 @@
 /* Footer */
 .footer {
-  padding: 1.5rem;
-  text-align: center;
-  background: #fff;
-  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f6f5f1;
 }
 
 .footer .socials a {
   margin: 0 0.5rem;
   text-decoration: none;
-  color: #2e8b57;
+}
+.mcontainer {
+  margin: 0 auto;
+  padding: 4rem 12.4rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 4rem 3.2rem;
+  }
+}
+@media (max-width: 375px) {
+  .footer {
+    padding: 3.2rem 1.6rem;
+  }
+  .footer {
+    flex-direction: column;
+  }
 }

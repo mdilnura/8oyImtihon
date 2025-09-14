@@ -28,7 +28,11 @@ function Home() {
           <h2>What you'll get</h2>
           <div className="feature-cards">
             <div className="card">
-              <img className="imag" src="/images/icon-whole-food-recipes.svg" alt="" />
+              <img
+                className="imag"
+                src="/images/icon-whole-food-recipes.svg"
+                alt=""
+              />
               <h3>Whole-food recipes</h3>
               <p>Each dish uses everyday, unprocessed ingredients.</p>
             </div>
@@ -52,13 +56,23 @@ function Home() {
 
         {/* Info */}
         <section className="info">
-          <h2>Built for real life</h2>
-          <p>
-            Cooking shouldn't be complicated. These recipes come in under 30
-            minutes or less, fit busy schedules, and taste good enough to share.
-          </p>
+          <div className="wrapper">
+            <h2>Built for real life</h2>
+            <p className="wrapper-p1">
+              Cooking shouldn't be complicated. These recipes come in under{" "}
+              <span className="span">30 minutes</span> of active time, fit busy
+              schedules, and taste good enough to repeat.
+            </p>
+            <p className="wrapper-p2">
+              Whether you're new to the kitchen or just need fresh ideas, we've
+              got you covered.
+            </p>
+          </div>
           <div className="info-img">
-            <img src="/images/cutting.jpg" alt="Cutting vegetables" />
+            <img
+              src="/images/image-home-real-life-large.webp"
+              alt="Cutting vegetables"
+            />
           </div>
         </section>
 

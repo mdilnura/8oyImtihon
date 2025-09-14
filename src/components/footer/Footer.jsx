@@ -1,13 +1,20 @@
 import React from "react";
 import "./Footer.css";
+import "../../index.css";
 export default function Footer() {
   return (
-    <footer className="footer">
-      <p>Made with ❤️ and 🥗</p>
+    <footer className="footer mcontainer">
+      <p>Made with ❤️ and 🥑</p>
       <div className="socials">
-        <a href="#">Fb</a>
-        <a href="#">Tw</a>
-        <a href="#">In</a>
+        <a href="#">
+          <img src="/images/Instagram.svg" alt="" />
+        </a>
+        <a href="#">
+          <img src="/images/Frame.svg" alt="" />
+        </a>
+        <a href="#">
+          <img src="/images/tiktok.svg" alt="" />
+        </a>
       </div>
     </footer>
   );
