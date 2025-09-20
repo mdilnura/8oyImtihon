@@ -48,7 +48,7 @@ function Recipes() {
     : [];
 
   return (
-    <>
+    <div className="clas">
       <section>
         <div className="container rec__container">
           <h1 className="rec__title">Explore our simple, healthy recipes</h1>
@@ -116,7 +116,7 @@ function Recipes() {
           <RecipesCard recipe={recipe} key={recipe.id} />
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 

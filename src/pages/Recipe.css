@@ -1,0 +1,89 @@
+.recipe__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 4.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.recipee__link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #163a34;
+  opacity: 70%;
+}
+.recipe__title {
+  font-weight: 600;
+  color: #163a34;
+}
+
+.recipe__info {
+  display: flex;
+  gap: 4rem;
+  margin-bottom: 6.4rem;
+}
+.recipe__image {
+  border-radius: 1.6rem;
+}
+.r-list {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+.recipe__info-title {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 1.2;
+  letter-spacing: -2px;
+  color: #163a34;
+  margin-bottom: 2rem;
+}
+.recipe__info-desc {
+  font-family: 1.5;
+  line-height: -0.4px;
+  color: #395852;
+  margin-bottom: 2rem;
+}
+.recipe__detail {
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 2rem;
+}
+.recipe__info-ing {
+  font-weight: 700;
+  font-size: var(--font-size-preset-4);
+  color: var(--color-neutral-900);
+  line-height: var(--line-height-normal);
+  margin-bottom: 1.6rem;
+}
+.ingredient__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 2rem;
+}
+.ingredient {
+  font-size: var(--font-size-preset-5);
+  line-height: var(--line-height-loose);
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-neutral-600);
+}
+
+.more {
+  margin-top: 6.4rem;
+  margin-bottom: 9.6rem;
+}
+.more__title {
+  font-weight: 700;
+  font-size: var(--font-size-preset-3);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-snug);
+  margin-bottom: 2.4rem;
+}
+
+.more__recipes {
+  display: flex;
+  gap: 3.2rem;
+  list-style: none;
+}

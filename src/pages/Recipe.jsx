@@ -1,11 +1,15 @@
 import React, { useEffect } from "react";
-import { data, Link, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDatabase } from "../hooks/UseDatabase";
 import RecipesCard from "../components/RecipesCard";
-
+import "./Recipe.css";
 function Recipe() {
   const { id } = useParams();
+
+  // bitta recipe
   const { data: recipe, getPost } = useDatabase("/recipes/" + id);
+
+  // hamma recipes
   const { data: moreRecipes, getPost: getRecipes } = useDatabase("/recipes");
 
   useEffect(() => {
@@ -13,10 +17,17 @@ function Recipe() {
     getRecipes();
   }, [id]);
 
+  const recipesArray = Array.isArray(moreRecipes)
+    ? moreRecipes
+    : moreRecipes
+    ? [moreRecipes]
+    : [];
+
   return (
     <div>
       {recipe && (
         <>
+          {/* Breadcrumb */}
           <div className="recipe__bar container">
             <Link className="recipee__link" to="/recipes">
               Recipes
@@ -25,85 +36,90 @@ function Recipe() {
             <p className="recipe__title">{recipe.title}</p>
           </div>
 
+          {/* Recipe Info */}
           <div className="recipe__info container">
             <picture>
               <source
-                className="recipes__item-image recipecard-img-small"
-                media="(max-width: 375px)"
-                width={327}
-                height={300}
+                media="(max-width:768px ) "
+                width={704}
+                height={683}
                 srcSet={recipe.image?.small}
               />
               <source
-                className="recipes__item-image recipecard-img-large"
-                media="(max-width: 768px) "
-                width={680}
+                media="(max-width: 1192px) "
+                width={618}
                 height={600}
-                srcSet={recipe.image?.small}
+                srcSet={recipe.image?.large}
               />
               <img
-                className="recipes__item-image"
-                src={recipe.image?.large}
-                alt={recipe.title}
-                width={360}
-                height={300}
+                className="built__image"
+                src={recipe.image?.small}
+                alt=""
+                width={343}
+                height={333}
               />
             </picture>
 
             <div className="recipe__info-right">
               <h2 className="recipe__info-title">{recipe.title}</h2>
               <p className="recipe__info-desc">{recipe.overview}</p>
+
               <ul className="recipe__detail">
                 <li className="recipes__details__item">
-                  <img src="../assets/images/icon-servings.svg" alt="" />
+                  <img src="../assets/images/user.svg" alt="" />
                   <p className="recipes__details-prep">
                     Servings: {recipe.servings}
                   </p>
                 </li>
                 <li className="recipes__details__item">
-                  <img src="../assets/images/icon-prep-time.svg" alt="" />
+                  <img src="../assets/images/Timer.svg" alt="" />
                   <p className="recipes__details-prep">
-                    Prep: {recipe.prepMinutes}
+                    Prep: {recipe.prepMinutes} mins
                   </p>
                 </li>
                 <li className="recipes__details__item">
-                  <img src="../assets/images/icon-cook-time.svg" alt="" />
+                  <img src="../assets/images/Food.svg" alt="" />
                   <p className="recipes__details-prep">
-                    Servings: {recipe.cookMinutes}
+                    Cook: {recipe.cookMinutes} mins
                   </p>
                 </li>
               </ul>
+
               <p className="recipe__info-ing">Ingredients:</p>
               <ul className="ingredient__list">
-                {recipe.ingredients.map((ingredient, index) => {
-                  return (
-                    <li key={index}>
-                      <p className="ingredient">{ingredient}</p>
-                    </li>
-                  );
-                })}
+                {recipe.ingredients?.map((ingredient, index) => (
+                  <li className="r-list" key={index}>
+                    <img src="../assets/images/arrow.svg" alt="" />
+                    <p className="ingredient">{ingredient}</p>
+                  </li>
+                ))}
               </ul>
+
               <p className="recipe__info-ing">Instructions:</p>
-              <ul className="inctruction">
-                {recipe.instructions.map((instructions, index) => {
-                  return (
-                    <li key={index}>
-                      <p className="ingredient">{instructions}</p>
-                    </li>
-                  );
-                })}
+              <ul className="ingredient__list">
+                {recipe.instructions?.map((instruction, index) => (
+                  <li className="r-list" key={index}>
+                    <img src="../assets/images/arrow.svg" alt="" />
+                    <p className="ingredient">{instruction}</p>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
+
+          {/* More Recipes */}
           <div className="more container">
             <p className="more__title">More recipes</p>
             <ul className="more__recipes">
-              {!moreRecipes && <li>Loading...</li>}
-              {moreRecipes &&
-                moreRecipes
+              {recipesArray.length === 0 && <li>Loading...</li>}
+              <li className="more-li">
+                {recipesArray
                   .filter((r) => r.id !== recipe.id)
                   .slice(0, 3)
-                  .map((r) => <RecipesCard key={r.id} recipe={r} />)}
+                  .map((r) => (
+                    <RecipesCard key={r.id} recipe={r} />
+                  ))}
+              </li>
             </ul>
           </div>
         </>

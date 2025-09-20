@@ -15,22 +15,32 @@ function RecipesCard({ recipe }) {
           media="(max-width: 375px)"
           width={327}
           height={300}
-          srcSet={recipe.image?.small}
+          srcSet={recipe.image?.small || "/images/default-small.webp"}
         />
         <source
           className="recipes__item-image recipecard-img-large"
-          media="(max-width: 768px) "
+          media="(max-width: 768px)"
           width={680}
           height={600}
-          srcSet={recipe.image?.small}
+          srcSet={recipe.image?.large || "/images/default-large.webp"}
         />
-        <img
-          className="recipes__item-image"
-          src={recipe.image?.large}
-          alt={recipe.title}
-          width={360}
-          height={300}
-        />
+        {recipe.image?.large ? (
+          <img
+            className="recipes__item-image"
+            src={recipe.image.large}
+            alt={recipe.title}
+            width={360}
+            height={300}
+          />
+        ) : (
+          <img
+            className="recipes__item-image"
+            src="/images/default.webp"
+            alt="Default recipe"
+            width={360}
+            height={300}
+          />
+        )}
       </picture>
 
       <div className="recipes__info">
