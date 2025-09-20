@@ -17,7 +17,7 @@ function Home() {
           <button className="btn">Start exploring</button>
           <div className="hero-img">
             <img
-              src="/images/image-home-hero-large.webp"
+              src="../assets/images/image-home-hero-large.webp"
               alt="Cooking at home"
             />
           </div>
@@ -30,21 +30,21 @@ function Home() {
             <div className="card">
               <img
                 className="imag"
-                src="/images/icon-whole-food-recipes.svg"
+                src="../assets/images/icon-whole-food-recipes.svg"
                 alt=""
               />
               <h3>Whole-food recipes</h3>
               <p>Each dish uses everyday, unprocessed ingredients.</p>
             </div>
             <div className="card">
-              <img className="img" src="/images/icon-minimum-fuss.svg" alt="" />
+              <img className="img" src="../assets/images/icon-minimum-fuss.svg" alt="" />
               <h3>Minimum fuss</h3>
               <p>
                 All recipes are designed to make eating healthy quick and easy.
               </p>
             </div>
             <div className="card">
-              <img className="img" src="/images/icon-search.svg" alt="" />
+              <img className="img" src="../assets/images/icon-search.svg" alt="" />
               <h3>Search in seconds</h3>
               <p>
                 Filter by name or ingredient and jump straight to the recipe you
@@ -70,7 +70,7 @@ function Home() {
           </div>
           <div className="info-img">
             <img
-              src="/images/image-home-real-life-large.webp"
+              src="../assets/images/image-home-real-life-large.webp"
               alt="Cutting vegetables"
             />
           </div>

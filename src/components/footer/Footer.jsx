@@ -8,13 +8,13 @@ export default function Footer() {
         <p>Made with ❤️ and 🥑</p>
         <div className="socials">
           <a href="#">
-            <img src="/images/Instagram.svg" alt="" />
+            <img src="../assets/images/Instagram.svg" alt="" />
           </a>
           <a href="#">
-            <img src="/images/Frame.svg" alt="" />
+            <img src="../assets/images/Frame.svg" alt="" />
           </a>
           <a href="#">
-            <img src="/images/tiktok.svg" alt="" />
+            <img src="../assets/images/tiktok.svg" alt="" />
           </a>
         </div>
       </div>

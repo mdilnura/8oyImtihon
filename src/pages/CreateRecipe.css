@@ -1,0 +1,68 @@
+.input__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.input__wrapper input {
+  padding: 1.4rem 1.6rem;
+  font-size: 1.6rem;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background: linear-gradient(#f9f9f9, #f9f9f9) padding-box,
+    linear-gradient(90deg, #11cb93, #02412e) border-box;
+  color: #333;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .input__wrapper input {
+    padding: 1.2rem 1.3rem;
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 375px) {
+  .input__wrapper input {
+    padding: 1rem 1.1rem;
+    font-size: 1rem;
+  }
+}
+
+.input__wrapper input:focus {
+  background: linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(90deg, #f4b13d, #ee0979) border-box;
+  outline: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.input__wrapper input::placeholder {
+  color: #aaa;
+  font-style: italic;
+  font-size: 1.4rem;
+}
+.create-btn {
+  border-radius: 50px;
+}
+@media (max-width: 768px) {
+  .create-btn {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 375px) {
+  .create-btn {
+    font-size: 1.4rem;
+  }
+}
+/* Number olib tashlanadi bunda */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

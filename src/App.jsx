@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./layout/MainLayout";
-import { Home, About, Contact } from "./pages";
+import { Home, About, Recipes, Recipe } from "./pages";
 import "./components/button.css";
+import CreateRecipe from "./pages/CreateRecipe";
 
 function App() {
   const routes = createBrowserRouter([
@@ -11,7 +12,9 @@ function App() {
       children: [
         { index: true, element: <Home /> },
         { path: "/about", element: <About /> },
-        { path: "/contact", element: <Contact /> },
+        { path: "/recipes", element: <Recipes /> },
+        { path: "/recipe/:id", element: <Recipe /> },
+        { path: "/create", element: <CreateRecipe /> },
       ],
     },
   ]);

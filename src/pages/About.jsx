@@ -21,19 +21,18 @@ function About() {
           </div>
           <div className="info-img">
             <img
-              src="/images/image-about-our-mission-large.webp"
+              src="../assets/images/image-about-our-mission-large.webp"
               alt="Cutting vegetables"
             />
           </div>
         </section>
-        <hr />
+
         {/* why-we-exist========================= */}
       </div>
-      <hr className="divider"/>
+      <hr className="divider" />
       <div className="mycontainer">
         <section className="why-we-exist">
           <h2 className="why-we-exist__title">Why we exist</h2>
-
           <div className="why-wrapper">
             <div className="why-we-exist__item">
               <div className="why-we-exist__icon">
@@ -54,7 +53,7 @@ function About() {
 
             <div className="why-we-exist__item">
               <div className="why-we-exist__icon">
-                <img src="/images/arrow.svg" alt="" />
+                <img src="../assets/images/arrow.svg" alt="" />
               </div>
               <div className="why-we-exist__content">
                 <h3 className="why-we-exist__subtitle">
@@ -86,7 +85,7 @@ function About() {
           </div>
         </section>
       </div>
-      <hr className="divider"/>
+      <hr className="divider" />
       <div className="mycontainer">
         <section className="why-we-exist">
           <h2 className="why-we-exist__title">
@@ -97,7 +96,7 @@ function About() {
           <div className="why-wrapper">
             <div className="why-we-exist__item">
               <div className="why-we-exist__icon">
-                <img src="/images/arrow.svg" alt="" />
+                <img src="../assets/images/arrow.svg" alt="" />
               </div>
               <div className="why-we-exist__content">
                 <h3 className="why-we-exist__subtitle">
@@ -127,7 +126,7 @@ function About() {
 
             <div className="why-we-exist__item">
               <div className="why-we-exist__icon">
-                <img src="/images/arrow.svg" alt="" />
+                <img src="../assets/images/arrow.svg" alt="" />
               </div>
               <div className="why-we-exist__content">
                 <h3 className="why-we-exist__subtitle">Respect for time.</h3>
@@ -153,12 +152,44 @@ function About() {
             </div>
           </div>
         </section>
-        <hr />
       </div>
-      <hr className="divider"/>
+      <hr className="divider" />
+
+      <div className="mycontainer">
+        {/* section Beyond========================= */}
+        <section className="info inabout">
+          <div className="wrapper wrappe">
+            <h2>Beyond the plate</h2>
+            <p className="wrapper-p1">
+              We believe food is a catalyst for community and well-being. By
+              sharing approachable recipes, we hope to:
+            </p>
+            <ul className="list">
+              <li className="wrapper-p1">
+                Encourage family dinners and social cooking.
+              </li>
+              <li className="wrapper-p1">
+                Reduce reliance on single-use packaging and delivery waste.
+              </li>
+              <li className="wrapper-p1">
+                Spark curiosity about seasonal produce and local agriculture.
+              </li>
+            </ul>
+          </div>
+          <div className="info-img">
+            <img
+              className="inim"
+              src="../assets/images/image-about-beyond-the-plate-large.webp"
+              alt="Cutting vegetables"
+            />
+          </div>
+        </section>
+        {/* <hr /> */}
+        {/* why-we-exist========================= */}
+      </div>
       <div className="mycontainer">
         {/* CTA ===============================*/}
-        <section className="cta">
+        <section className="cta cta-mt">
           <h2>Ready to cook smarter?</h2>
           <p>
             Hit the button, pick a recipe, and get dinner on the table—fast.
