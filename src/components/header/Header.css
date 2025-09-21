@@ -18,7 +18,10 @@
   color: #163a34;
   text-decoration: none;
 }
-
+.item:hover {
+  border-bottom: 2px solid #163a34;
+  transform: scale(1.1);
+}
 .active-link span {
   display: inline-block;
   border-bottom: 3px solid #fe9f6b;
@@ -30,6 +33,7 @@
   display: flex;
   gap: 4rem;
 }
+
 .desktop {
   /* display: block; */
   /* gap: 4rem; */

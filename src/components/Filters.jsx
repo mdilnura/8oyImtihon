@@ -1,4 +1,4 @@
-import React from "react";
+import "../pages/Recipes.css";
 
 const Filters = ({
   options,
@@ -15,7 +15,7 @@ const Filters = ({
         onClick={() => setIsOpen((prev) => !prev)}
         className="filter__btn"
       >
-        <span>{title}</span>{" "}
+        <span>{title}</span>
         <img
           width={20}
           height={20}
@@ -29,7 +29,7 @@ const Filters = ({
           {options.map((o) => (
             <div className="f__item" key={o.value}>
               <input
-                className="filter__checkbox"
+                className="rounded__checkbox"
                 type="checkbox"
                 name={o.value}
                 value={o.value}

@@ -27,7 +27,12 @@
 }
 
 /* ==================FILTER====================== */
-
+.filters__container {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  margin-right: 1rem;
+}
 .filters__wrapper {
   display: flex;
   gap: 1.6rem;
@@ -60,6 +65,96 @@
   justify-content: space-between;
   margin-bottom: 2.4rem;
 }
+
+/* filter ==========================*/
+.filter__btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e0e6e3;
+  color: #163a34;
+  border-radius: 8px;
+  padding: 1rem 1.6rem;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter__btn:hover {
+  background: #e9f5ef;
+  border-color: #154d36;
+}
+
+
+.filter__item-wrapper {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #e0e6e3;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+
+.f__item {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1.6rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 1.6rem;
+  color: #163a34;
+}
+
+.f__item:hover {
+  background-color: #f5f5f5;
+}
+
+/* Rounded checkbox */
+.rounded__checkbox {
+  /* margin-top: 1rem; */
+  width: 18px;
+  height: 18px;
+  border: 2px solid #d0dcd9;
+  border-radius: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  margin-right: 0.8rem;
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+
+.rounded__checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+
+.clear__btn {
+  all: unset;
+}
+
+.clear__btn:hover {
+  text-decoration: underline;
+}
+
 /* ==================SEARCH==================== */
 .search__wrapper {
   position: relative;
@@ -96,8 +191,8 @@
   width: 20px;
   height: 20px;
 }
-/* ================================================= */
 
+/* ================================================= */
 .recipes__list {
   display: grid;
   justify-content: center;

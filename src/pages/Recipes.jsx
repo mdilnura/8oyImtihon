@@ -7,7 +7,6 @@ import "./Recipes.css";
 function Recipes() {
   const { getPost, data } = useDatabase("/recipes");
   const [search, setSearch] = useState("");
-  console.log(data);
 
   const [prepTimeFilters, setPrepTimeFilters] = useState([]);
   const [cookTimeFilters, setCookTimeFilters] = useState([]);
@@ -69,7 +68,8 @@ function Recipes() {
               setActiveFilters={setPrepTimeFilters}
               isOpen={isPrepFilterOpen}
               setIsOpen={setIsPrepFilterOpen}
-              title="Max Prep Time"
+              title="Prep Time"
+              variant="prep" 
               options={[
                 { value: "0-min-prep", label: "0 minutes" },
                 { value: "5-min-prep", label: "5 minutes" },
@@ -81,7 +81,8 @@ function Recipes() {
               setActiveFilters={setCookTimeFilters}
               isOpen={isCookFilterOpen}
               setIsOpen={setIsCookFilterOpen}
-              title="Max Cook Time"
+              title="Cook Time"
+              variant="cook" 
               options={[
                 { value: "0-min-cook", label: "0 minutes" },
                 { value: "5-min-cook", label: "5 minutes" },
