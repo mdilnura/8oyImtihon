@@ -1,24 +1,9 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import MainLayout from "./layout/MainLayout";
-import { Home, About, Recipes, Recipe } from "./pages";
-import "./components/button.css";
-import CreateRecipe from "./pages/CreateRecipe";
+import React from 'react'
 
 function App() {
-  const routes = createBrowserRouter([
-    {
-      path: "/",
-      element: <MainLayout />,
-      children: [
-        { index: true, element: <Home /> },
-        { path: "/about", element: <About /> },
-        { path: "/recipes", element: <Recipes /> },
-        { path: "/recipe/:id", element: <Recipe /> },
-        { path: "/create", element: <CreateRecipe /> },
-      ],
-    },
-  ]);
-  return <RouterProvider router={routes} />;
+  return (
+    <a href='https://github.com/mdilnura/exam'>8-oy imtihon</a>
+  )
 }
 
-export default App;
+export default App
